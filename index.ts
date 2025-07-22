@@ -12,8 +12,8 @@ const safeWallet = new Wallet(process.env.PRIVATE_KEY_SAFE!, provider);
 const safeAddress = process.env.SAFE_WALLET!;
 const compromisedAddress = process.env.COMPROMISED_WALLET!;
 
-const ETH_THRESHOLD = parseEther("0.00002");
-const ETH_TOPUP_AMOUNT = parseEther("0.00001");
+const ETH_THRESHOLD = parseEther("0.000002");
+const ETH_TOPUP_AMOUNT = parseEther("0.000001");
 
 async function checkAndRescue(token: any) {
   const tokenContract = new Contract(token.address, ERC20_ABI, compromisedWallet);
